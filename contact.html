@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site Plan</title>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600&family=Bona+Nova+SC:wght@700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/project.css">
+        <script src="scripts/project.js" defer></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="hero">
+                <img src="images/logo.jpg" alt="Site Logo">
+                <nav>
+                    <a href="siteplan.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Booking/Contacts</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="booking-intro">
+                <h1>Book Your Dream Vacation</h1>
+                <p>Ready for a getaway? Fill out the form to plan your next adventure with us. Our team will reach out with the best deals and packages!</p>
+            </section>
+
+            <section class="booking-grid">
+                <!-- Booking Form -->
+                <div class="booking-form">
+                <h2>Booking Request</h2>
+                <form>
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" placeholder="e.g., Bali, Paris, Hawaii" required>
+
+                    <div class="form-row">
+                    <div>
+                        <label for="checkin">Check-in Date</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+                    <div>
+                        <label for="checkout">Check-out Date</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                    </div>
+
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" max="10" placeholder="2" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                    <label for="message">Special Requests</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us your preferences..."></textarea>
+
+                    <button type="submit">Submit Booking</button>
+                </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Need assistance or have questions? Reach out to our travel experts.</p>
+
+                <div class="info-card">
+                    <p><strong>Email:</strong> support@vacayplanner.com</p>
+                    <p><strong>Phone:</strong> +(234)089 999 9999</p>
+                    <p><strong>Address:</strong> 23 Palm Avenue, Lagos, Nigeria</p>
+                    <p><strong>Hours:</strong> Mon–Sat: 8:00 AM – 6:00 PM</p>
+                </div>
+
+                <div class="map">
+                    <iframe
+                    src="https://maps.google.com/maps?q=lagos%20nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="250"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                    </iframe>
+                </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© <span id="currentyear"></span> | TEMPLE ALBUM | ✨ Annalucia Awa ✨, Nigeria.</p>
+                <p>Last Updated: <span id="lastmodified"></span></p>
+        </footer>
+
+    </body>
 </html>
