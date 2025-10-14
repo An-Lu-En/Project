@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vacay Planner | Website Planning Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600&family=Bona+Nova+SC:wght@700&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --primary-color: #0b3d3a;
+                --secondary-color: #d7c9a3;
+                --text-color: #222;
+            }
+
+            body {
+                font-family: 'League Spartan', sans-serif;
+                color: var(--text-color);
+                background-color: var(--secondary-color);
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+
+            header {
+                background-color: var(--primary-color);
+                color: #fff;
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+
+            h1, h2 {
+                font-family: 'Bona Nova SC', serif;
+                color: var(--primary-color);
+            }
+
+            main {
+                max-width: 900px;
+                margin: 2rem auto;
+                background: #fff;
+                padding: 2rem;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            section {
+                margin-bottom: 2rem;
+            }
+
+            .wireframes {
+                background-color: #f8f8f8;
+                padding: 1.5rem;
+                border-radius: 10px;
+            }
+
+           /* Wireframe section styling */
+            #wireframe {
+            text-align: center;
+            padding: 2rem;
+            }
+
+            #wireframe .wireframes {
+            margin-bottom: 1.5rem;
+            }
+
+            #wireframe h2 {
+            color: #0b3d3a;
+            font-family: "Bona Nova SC", serif;
+            }
+
+            #wireframe h3 {
+            color: #0b3d3a;
+            margin-top: 1rem;
+            font-family: "Bona Nova SC", serif;
+            }
+
+            /* Image group styling */
+            .image-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            }
+
+            /* Make images responsive and limit their width */
+            .image-group img {
+            width: 90%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            }
+
+            /* For larger screens, show the two images side by side */
+            @media (min-width: 768px) {
+            .image-group {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .image-group img {
+                max-width: 300px; /* keeps desktop image smaller */
+            }
+            }
+
+            footer {
+                text-align: center;
+                padding: 1.5rem;
+                background-color: var(--primary-color);
+                color: #fff;
+                font-size: 0.9rem;
+            }
+        </style>
+    </head>
+    <body>
+       <script>
+            // getdates.js
+
+            // Set current year dynamically
+            const yearSpan = document.getElementById("currentyear");
+            const today = new Date();
+            if (yearSpan) {
+                yearSpan.textContent = today.getFullYear();
+            }
+
+            // Set last modified date dynamically
+            const lastModifiedParagraphs = document.querySelectorAll("footer p");
+            if (lastModifiedParagraphs.length > 1) {
+                lastModifiedParagraphs[1].textContent = "Last Modified: " + document.lastModified;
+            }
+
+            // alert("This page has changed!");
+        </script>
+
+
+        <header>
+            <h1>Vacay Planner</h1>
+            <p>Your digital travel companion</p>
+        </header>
+
+        <main>
+            <section id="site-name">
+                <h2>Site Name</h2>
+                <p><strong>Vacay Planner</strong> — This name represents a digital travel companion designed to help users organize trips, manage bookings, and create unforgettable memories. It captures the idea of vacation and smart planning combined.</p>
+                <p><em>Optional domain:</em> vacayplanner.com</p>
+            </section>
+
+            <section id="purpose">
+                <h2>Site Purpose</h2>
+                <p>The purpose of Vacay Planner is to simplify trip organization by providing users with tools to plan destinations, track itineraries, and store booking details. The site aims to make travel stress-free and enjoyable for individuals, families, and groups.</p>
+            </section>
+
+            <section id="scenarios">
+                <h2>Scenarios</h2>
+                <ul>
+                    <li>How can I organize all my trip bookings in one place?</li>
+                    <li>Can I save destinations and build an itinerary before booking?</li>
+                </ul>
+            </section>
+
+            <section id="colors">
+                <h2>Color Schema</h2>
+                <p><strong>Primary Color:</strong> Deep Teal (<span style="color:#0b3d3a;">#0b3d3a</span>) — used for headers, navigation, and highlights.</p>
+                <p><strong>Secondary Color:</strong> Soft Sand (<span style="color:#d7c9a3;">#d7c9a3</span>) — used for backgrounds and accent areas.</p>
+            </section>
+
+            <section id="typography">
+                <h2>Typography</h2>
+                <ul>
+                    <li><strong>Headings:</strong> Bona Nova SC — gives a clean, elegant, and travel-inspired look.</li>
+                    <li><strong>Body Text:</strong> League Spartan — modern, simple, and easy to read for all users.</li>
+                </ul>
+            </section>
+
+            <section id="wireframe">
+                <h2>Wireframe</h2>
+                <div class="wireframes">
+                    <h3>Mobile View</h3>
+                    <p>• Top navigation with logo and hamburger menu<br>
+                    • Hero image with site tagline<br>
+                    • About section overview<br>
+                    • Contact info and social icons stacked vertically
+                    </p>
+
+                    <h3>Desktop View</h3>
+                    <p>• Header with logo and horizontal navigation<br>
+                    • Large banner image at top<br>
+                    • Three-column section for “Plan”, “Book”, “Explore” highlights<br>
+                    • Footer with social links and copyright
+                    </p>
+                </div>
+                <div class="image-group">
+                    <img src="mobile mockup.JPG" alt="mobile view" loading="lazy">
+                    <img src="desktop.JPG" alt="desktop view" loading="lazy">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© <span id="currentyear"></span> | TEMPLE ALBUM | ✨ Annalucia Awa ✨, Nigeria.</p>
+            <p>Last Updated: <span id="lastmodified"></span></p>
+        </footer>
+
+    </body>
+</html>
